@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-b64dfa855e4866786ddb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "leap_msgs__py",
+					"jsonFile" : "directory-leap_msgs__py-409554b715ffe3d17289.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs/leap_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "leap_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_leap_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_leap_msgs_egg-ff120b2202660ffd326b.json",
+					"name" : "ament_cmake_python_build_leap_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_leap_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_leap_msgs-9f3f8edc3bd12b577e8b.json",
+					"name" : "ament_cmake_python_copy_leap_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs-bd2839981c41a0f02048.json",
+					"name" : "leap_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__cpp-c12699afe8c6b4bbc58b.json",
+					"name" : "leap_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "leap_msgs__py::@bc084203002a459c63f2",
+					"jsonFile" : "target-leap_msgs__py-84e97cf240848c11d61b.json",
+					"name" : "leap_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_generator_c-6ad44858bdb4e2ed7e8c.json",
+					"name" : "leap_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_generator_py-fb8a876cac1288e4caf3.json",
+					"name" : "leap_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_c-29525a934a75bbfd6030.json",
+					"name" : "leap_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_c__pyext-09d96f6b1934bc41b998.json",
+					"name" : "leap_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_cpp-ed98dacc10feaed1dfa1.json",
+					"name" : "leap_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_fastrtps_c-5642d94582ba3620b1b6.json",
+					"name" : "leap_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_fastrtps_c__pyext-3feccd4a530f0b0e8bbd.json",
+					"name" : "leap_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_fastrtps_cpp-528e3407930ee7265a72.json",
+					"name" : "leap_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_introspection_c-de5d1739fbdba8336d5a.json",
+					"name" : "leap_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_introspection_c__pyext-def3057db633804e3889.json",
+					"name" : "leap_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs__rosidl_typesupport_introspection_cpp-895faca7118445ef01eb.json",
+					"name" : "leap_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leap_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leap_msgs_uninstall-b677dba5091b00922f4f.json",
+					"name" : "leap_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a726716679735bdf1b95.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs",
+		"source" : "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

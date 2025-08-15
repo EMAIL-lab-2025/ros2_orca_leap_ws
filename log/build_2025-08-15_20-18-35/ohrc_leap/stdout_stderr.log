@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/ohrc_leap/ohrc_leap.egg-info
+writing ../../build/ohrc_leap/ohrc_leap.egg-info/PKG-INFO
+writing dependency_links to ../../build/ohrc_leap/ohrc_leap.egg-info/dependency_links.txt
+writing entry points to ../../build/ohrc_leap/ohrc_leap.egg-info/entry_points.txt
+writing requirements to ../../build/ohrc_leap/ohrc_leap.egg-info/requires.txt
+writing top-level names to ../../build/ohrc_leap/ohrc_leap.egg-info/top_level.txt
+writing manifest file '../../build/ohrc_leap/ohrc_leap.egg-info/SOURCES.txt'
+reading manifest file '../../build/ohrc_leap/ohrc_leap.egg-info/SOURCES.txt'
+writing manifest file '../../build/ohrc_leap/ohrc_leap.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build/lib
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build/lib/ohrc_leap
+copying ohrc_leap/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build/lib/ohrc_leap
+copying ohrc_leap/state_topic_publisher.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build/lib/ohrc_leap
+running install
+running install_lib
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap
+copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build/lib/ohrc_leap/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap
+copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build/lib/ohrc_leap/state_topic_publisher.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap
+byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap/state_topic_publisher.py to state_topic_publisher.cpython-310.pyc
+running install_data
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ament_index
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ament_index/resource_index
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ament_index/resource_index/packages
+copying resource/ohrc_leap -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ament_index/resource_index/packages
+copying package.xml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap
+creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/launch
+copying launch/ohrc_leap_teleoperation.launch.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/launch
+running install_egg_info
+Copying ../../build/ohrc_leap/ohrc_leap.egg-info to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap-0.0.0-py3.10.egg-info
+running install_scripts
+Installing state_topic_publisher script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/ohrc_leap
+writing list of installed files to '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/install.log'

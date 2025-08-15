@@ -1,0 +1,10 @@
+{
+  "package_name": "leap_msgs",
+  "non_idl_tuples": [
+    "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs:msg/Hand.msg",
+    "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs:msg/Hands.msg",
+    "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs:msg/Finger.msg",
+    "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs:msg/Arm.msg",
+    "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs:msg/Bone.msg"
+  ]
+}

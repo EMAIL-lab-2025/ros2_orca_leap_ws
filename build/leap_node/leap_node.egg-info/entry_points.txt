@@ -1,0 +1,11 @@
+[console_scripts]
+all_detector = leap_node.all_detector:main
+finger_detector = leap_node.finger_detector:main
+gesture_detector = leap_node.gesture_detector:main
+hands_publisher = leap_node.hands_publisher:main
+position_detector = leap_node.position_detector:main
+posture_detector = leap_node.posture_detector:main
+rviz_visualizer = leap_node.rviz_visualizer:main
+test_rviz = leap_node.test_rviz:main
+visualizer = leap_node.visualizer:main
+

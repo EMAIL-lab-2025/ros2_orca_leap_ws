@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "leap_msgs__py",
+		"source" : "/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs/leap_msgs__py"
+	}
+}

@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from leap_msgs/msg/Arm.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+
+module leap_msgs {
+  module msg {
+    struct Arm {
+      @verbatim (language="comment", text=
+        "肘の位置 (x, y, z)")
+      geometry_msgs::msg::Point elbow_position;
+
+      @verbatim (language="comment", text=
+        "手首の位置 (x, y, z)")
+      geometry_msgs::msg::Point wrist_position;
+
+      @verbatim (language="comment", text=
+        "腕の方向ベクトル (x, y, z)")
+      geometry_msgs::msg::Vector3 direction;
+
+      @verbatim (language="comment", text=
+        "腕の長さ (mm)")
+      float length;
+
+      @verbatim (language="comment", text=
+        "腕の幅 (mm)")
+      float width;
+    };
+  };
+};

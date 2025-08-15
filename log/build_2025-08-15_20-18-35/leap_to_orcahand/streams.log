@@ -1,0 +1,52 @@
+[0.013s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_to_orcahand -DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python -DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python -DCMAKE_INSTALL_PREFIX=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand
+[0.407s] -- The C compiler identification is GNU 11.4.0
+[0.407s] -- The CXX compiler identification is GNU 11.4.0
+[0.407s] -- Detecting C compiler ABI info
+[0.407s] -- Detecting C compiler ABI info - done
+[0.407s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.407s] -- Detecting C compile features
+[0.407s] -- Detecting C compile features - done
+[0.407s] -- Detecting CXX compiler ABI info
+[0.407s] -- Detecting CXX compiler ABI info - done
+[0.407s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.407s] -- Detecting CXX compile features
+[0.407s] -- Detecting CXX compile features - done
+[1.252s] -- Found Python3: /home/xingyi/.venvs/leapc/bin/python (found version "3.10.12") found components: Interpreter Development Development.Module Development.Embed 
+[1.253s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.302s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.343s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.344s] -- Added test 'lint_cmake' to check CMake code style
+[1.344s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.344s] -- Added test 'xmllint' to check XML markup files
+[1.345s] -- Configuring done
+[1.346s] -- Generating done
+[1.346s] [33mCMake Warning:
+[1.346s]   Manually-specified variables were not used by the project:
+[1.346s] 
+[1.346s]     PYTHON_EXECUTABLE
+[1.346s] 
+[1.346s] [0m
+[1.347s] -- Build files have been written to: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand
+[1.349s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_to_orcahand -DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python -DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python -DCMAKE_INSTALL_PREFIX=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand
+[1.350s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand -- -j32 -l32
+[1.376s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand -- -j32 -l32
+[1.377s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand
+[1.382s] -- Install configuration: ""
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/launch
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/launch/leap_orcahand.launch.py
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/ament_index/resource_index/package_run_dependencies/leap_to_orcahand
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/ament_index/resource_index/parent_prefix_path/leap_to_orcahand
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/environment/ament_prefix_path.sh
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/environment/ament_prefix_path.dsv
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/environment/path.sh
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/environment/path.dsv
+[1.382s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/local_setup.bash
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/local_setup.sh
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/local_setup.zsh
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/local_setup.dsv
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.dsv
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/ament_index/resource_index/packages/leap_to_orcahand
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/cmake/leap_to_orcahandConfig.cmake
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/cmake/leap_to_orcahandConfig-version.cmake
+[1.383s] -- Installing: /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.xml
+[1.384s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand

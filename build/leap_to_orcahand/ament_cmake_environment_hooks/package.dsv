@@ -1,0 +1,4 @@
+source;share/leap_to_orcahand/local_setup.bash
+source;share/leap_to_orcahand/local_setup.dsv
+source;share/leap_to_orcahand/local_setup.sh
+source;share/leap_to_orcahand/local_setup.zsh

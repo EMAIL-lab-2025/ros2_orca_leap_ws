@@ -1,0 +1,10 @@
+msg/Arm.idl
+msg/Arm.msg
+msg/Bone.idl
+msg/Bone.msg
+msg/Finger.idl
+msg/Finger.msg
+msg/Hand.idl
+msg/Hand.msg
+msg/Hands.idl
+msg/Hands.msg

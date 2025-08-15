@@ -1,0 +1,5 @@
+[console_scripts]
+leap_to_orcahand = orcahand_controller.leap_to_orcahand:main
+orcahand_commander = orcahand_controller.orcahand_commander:main
+orcahand_driver = orcahand_controller.orcahand_driver:main
+

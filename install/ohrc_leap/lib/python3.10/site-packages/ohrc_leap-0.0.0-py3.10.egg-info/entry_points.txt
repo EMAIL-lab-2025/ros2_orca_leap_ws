@@ -1,0 +1,3 @@
+[console_scripts]
+state_topic_publisher = ohrc_leap.state_topic_publisher:main
+

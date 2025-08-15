@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from leap_msgs/msg/Finger.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+#include "leap_msgs/msg/Bone.idl"
+
+module leap_msgs {
+  module msg {
+    struct Finger {
+      @verbatim (language="comment", text=
+        "指を一意に識別するID")
+      int32 id;
+
+      @verbatim (language="comment", text=
+        "指の種類 (0: Thumb, 1: Index, 2: Middle, 3: Ring, 4: Pinky)")
+      uint8 type;
+
+      @verbatim (language="comment", text=
+        "指先の位置 (x, y, z)")
+      geometry_msgs::msg::Point tip_position;
+
+      @verbatim (language="comment", text=
+        "指の方向ベクトル (x, y, z)")
+      geometry_msgs::msg::Vector3 direction;
+
+      @verbatim (language="comment", text=
+        "指の速度ベクトル (x, y, z)")
+      geometry_msgs::msg::Vector3 velocity;
+
+      @verbatim (language="comment", text=
+        "指の長さ (mm)")
+      float length;
+
+      @verbatim (language="comment", text=
+        "指の幅 (mm)")
+      float width;
+
+      @verbatim (language="comment", text=
+        "指を構成する骨の情報" "\n"
+        "指の骨のリスト (Metacarpal, Proximal, Intermediate, Distal)")
+      sequence<leap_msgs::msg::Bone> bones;
+    };
+  };
+};
