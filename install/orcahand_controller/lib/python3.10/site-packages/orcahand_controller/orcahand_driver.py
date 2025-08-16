@@ -45,7 +45,7 @@ class OrcahandDriverNode(Node):
                 return 1
             self.get_logger().info("Connected to hand successfully")
 
-            self.hand.init_joints(True)
+            self.hand.init_joints()
             self.torque_state = True
             time.sleep(0.3)
             self.internal_names = self.hand.joint_ids

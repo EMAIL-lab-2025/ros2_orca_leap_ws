@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "orcahand_description")
 set(orcahand_description_VERSION "0.0.0")
-set(orcahand_description_MAINTAINER "xingyi <peiguorui2006@outlook.com>")
+set(orcahand_description_MAINTAINER "xingyi <xingyipei801@gmail.com>")
 set(orcahand_description_BUILD_DEPENDS )
 set(orcahand_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(orcahand_description_BUILD_EXPORT_DEPENDS )

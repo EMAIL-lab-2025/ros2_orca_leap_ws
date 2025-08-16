@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "leap_to_orcahand")
 set(leap_to_orcahand_VERSION "0.0.0")
-set(leap_to_orcahand_MAINTAINER "xingyi <peiguorui2006@outlook.com>")
+set(leap_to_orcahand_MAINTAINER "xingyi <xingyipei801@gmail.com>")
 set(leap_to_orcahand_BUILD_DEPENDS "ament_cmake_python")
 set(leap_to_orcahand_BUILDTOOL_DEPENDS "ament_cmake")
 set(leap_to_orcahand_BUILD_EXPORT_DEPENDS )

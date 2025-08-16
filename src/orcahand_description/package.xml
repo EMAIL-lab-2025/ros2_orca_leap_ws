@@ -4,7 +4,7 @@
   <name>orcahand_description</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="peiguorui2006@outlook.com">xingyi</maintainer>
+  <maintainer email="xingyipei801@gmail.com">xingyi</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

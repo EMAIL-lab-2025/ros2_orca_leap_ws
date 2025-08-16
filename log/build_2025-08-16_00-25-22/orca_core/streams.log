@@ -1,0 +1,90 @@
+[0.602s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orca_core build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/install.log --single-version-externally-managed install_data
+[0.709s] running egg_info
+[0.709s] creating ../../build/orca_core/orca_core.egg-info
+[0.709s] writing ../../build/orca_core/orca_core.egg-info/PKG-INFO
+[0.709s] writing dependency_links to ../../build/orca_core/orca_core.egg-info/dependency_links.txt
+[0.709s] writing entry points to ../../build/orca_core/orca_core.egg-info/entry_points.txt
+[0.710s] writing requirements to ../../build/orca_core/orca_core.egg-info/requires.txt
+[0.710s] writing top-level names to ../../build/orca_core/orca_core.egg-info/top_level.txt
+[0.710s] writing manifest file '../../build/orca_core/orca_core.egg-info/SOURCES.txt'
+[0.711s] reading manifest file '../../build/orca_core/orca_core.egg-info/SOURCES.txt'
+[0.711s] reading manifest template 'MANIFEST.in'
+[0.711s] adding license file 'LICENSE'
+[0.711s] writing manifest file '../../build/orca_core/orca_core.egg-info/SOURCES.txt'
+[0.711s] running build
+[0.711s] running build_py
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests
+[0.711s] copying tests/test_tension.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests
+[0.711s] copying tests/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests
+[0.711s] copying tests/test_core.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests
+[0.711s] copying tests/test_calibration.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests
+[0.711s] copying tests/test_yaml.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core
+[0.711s] copying orca_core/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core
+[0.711s] copying orca_core/core.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware
+[0.711s] copying orca_core/hardware/mock_dynamixel_client.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware
+[0.711s] copying orca_core/hardware/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware
+[0.711s] copying orca_core/hardware/dynamixel_client.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/api
+[0.711s] copying orca_core/api/api.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/api
+[0.711s] copying orca_core/api/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/api
+[0.711s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/utils
+[0.711s] copying orca_core/utils/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/utils
+[0.711s] copying orca_core/utils/utils.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/utils
+[0.712s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/models
+[0.712s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/models/orcahand_v1_right
+[0.712s] copying orca_core/models/orcahand_v1_right/calibration.yaml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/models/orcahand_v1_right
+[0.712s] copying orca_core/models/orcahand_v1_right/config.yaml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/models/orcahand_v1_right
+[0.712s] running install
+[0.712s] running install_lib
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests/test_tension.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests/test_core.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests/test_calibration.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/tests/test_yaml.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/models
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/models/orcahand_v1_right
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/models/orcahand_v1_right/config.yaml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/models/orcahand_v1_right
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/models/orcahand_v1_right/calibration.yaml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/models/orcahand_v1_right
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware/mock_dynamixel_client.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/hardware/dynamixel_client.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/api
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/api/api.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/api
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/api/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/api
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/core.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core
+[0.713s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/utils
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/utils/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/utils
+[0.713s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build/lib/orca_core/utils/utils.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/utils
+[0.713s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests/test_tension.py to test_tension.cpython-310.pyc
+[0.714s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests/__init__.py to __init__.cpython-310.pyc
+[0.714s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests/test_core.py to test_core.cpython-310.pyc
+[0.714s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests/test_calibration.py to test_calibration.cpython-310.pyc
+[0.714s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/tests/test_yaml.py to test_yaml.cpython-310.pyc
+[0.714s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware/mock_dynamixel_client.py to mock_dynamixel_client.cpython-310.pyc
+[0.716s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware/__init__.py to __init__.cpython-310.pyc
+[0.716s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/hardware/dynamixel_client.py to dynamixel_client.cpython-310.pyc
+[0.717s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/__init__.py to __init__.cpython-310.pyc
+[0.717s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/api/api.py to api.cpython-310.pyc
+[0.718s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/api/__init__.py to __init__.cpython-310.pyc
+[0.718s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/core.py to core.cpython-310.pyc
+[0.721s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/utils/__init__.py to __init__.cpython-310.pyc
+[0.721s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core/utils/utils.py to utils.cpython-310.pyc
+[0.721s] running install_data
+[0.721s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/ament_index
+[0.721s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/ament_index/resource_index
+[0.721s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/ament_index/resource_index/packages
+[0.721s] copying resource/orca_core -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/ament_index/resource_index/packages
+[0.721s] copying package.xml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core
+[0.721s] running install_egg_info
+[0.722s] Copying ../../build/orca_core/orca_core.egg-info to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages/orca_core-0.0.0-py3.10.egg-info
+[0.722s] running install_scripts
+[0.732s] writing list of installed files to '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/install.log'
+[0.743s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core' returned '0': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orca_core build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/install.log --single-version-externally-managed install_data

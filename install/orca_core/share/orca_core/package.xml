@@ -3,7 +3,7 @@
   <name>orca_core</name>
   <version>0.1.0</version>
   <description>The orca_core package</description>
-  <maintainer email="peiguorui2006@outlook.com">xingyi</maintainer>
+  <maintainer email="xingyipei801@gmail.com">xingyi</maintainer>
   <license>MIT</license>
    <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

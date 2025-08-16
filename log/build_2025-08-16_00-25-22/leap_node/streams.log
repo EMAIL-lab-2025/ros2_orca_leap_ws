@@ -1,0 +1,72 @@
+[0.279s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node': CMAKE_PREFIX_PATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_node build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/install.log --single-version-externally-managed install_data
+[0.383s] running egg_info
+[0.383s] creating ../../build/leap_node/leap_node.egg-info
+[0.383s] writing ../../build/leap_node/leap_node.egg-info/PKG-INFO
+[0.383s] writing dependency_links to ../../build/leap_node/leap_node.egg-info/dependency_links.txt
+[0.383s] writing entry points to ../../build/leap_node/leap_node.egg-info/entry_points.txt
+[0.383s] writing requirements to ../../build/leap_node/leap_node.egg-info/requires.txt
+[0.383s] writing top-level names to ../../build/leap_node/leap_node.egg-info/top_level.txt
+[0.383s] writing manifest file '../../build/leap_node/leap_node.egg-info/SOURCES.txt'
+[0.384s] reading manifest file '../../build/leap_node/leap_node.egg-info/SOURCES.txt'
+[0.385s] writing manifest file '../../build/leap_node/leap_node.egg-info/SOURCES.txt'
+[0.385s] running build
+[0.385s] running build_py
+[0.385s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build
+[0.385s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib
+[0.385s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/hands_publisher.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/gesture_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/posture_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/test_rviz.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/visualizer.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/debug_leap.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/rviz_visualizer.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/position_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/finger_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] copying leap_node/all_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node
+[0.385s] running install
+[0.385s] running install_lib
+[0.386s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/hands_publisher.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/gesture_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/posture_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/__init__.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/test_rviz.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/visualizer.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/debug_leap.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/rviz_visualizer.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/position_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/finger_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build/lib/leap_node/all_detector.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node
+[0.386s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/hands_publisher.py to hands_publisher.cpython-310.pyc
+[0.387s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/gesture_detector.py to gesture_detector.cpython-310.pyc
+[0.387s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/posture_detector.py to posture_detector.cpython-310.pyc
+[0.387s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/__init__.py to __init__.cpython-310.pyc
+[0.387s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/test_rviz.py to test_rviz.cpython-310.pyc
+[0.388s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/visualizer.py to visualizer.cpython-310.pyc
+[0.388s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/debug_leap.py to debug_leap.cpython-310.pyc
+[0.388s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/rviz_visualizer.py to rviz_visualizer.cpython-310.pyc
+[0.388s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/position_detector.py to position_detector.cpython-310.pyc
+[0.389s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/finger_detector.py to finger_detector.cpython-310.pyc
+[0.389s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node/all_detector.py to all_detector.cpython-310.pyc
+[0.389s] running install_data
+[0.389s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/ament_index
+[0.389s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/ament_index/resource_index
+[0.389s] creating /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/ament_index/resource_index/packages
+[0.389s] copying resource/leap_node -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/ament_index/resource_index/packages
+[0.389s] copying package.xml -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node
+[0.389s] running install_egg_info
+[0.390s] Copying ../../build/leap_node/leap_node.egg-info to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node-0.0.0-py3.10.egg-info
+[0.390s] running install_scripts
+[0.400s] Installing all_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing finger_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing gesture_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing hands_publisher script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing position_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing posture_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing rviz_visualizer script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing test_rviz script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] Installing visualizer script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+[0.400s] writing list of installed files to '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/install.log'
+[0.410s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node' returned '0': CMAKE_PREFIX_PATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_node build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/install.log --single-version-externally-managed install_data

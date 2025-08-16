@@ -1,0 +1,26 @@
+[0.537s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orcahand_controller build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/install.log --single-version-externally-managed install_data
+[0.642s] running egg_info
+[0.643s] writing ../../build/orcahand_controller/orcahand_controller.egg-info/PKG-INFO
+[0.643s] writing dependency_links to ../../build/orcahand_controller/orcahand_controller.egg-info/dependency_links.txt
+[0.643s] writing entry points to ../../build/orcahand_controller/orcahand_controller.egg-info/entry_points.txt
+[0.643s] writing requirements to ../../build/orcahand_controller/orcahand_controller.egg-info/requires.txt
+[0.643s] writing top-level names to ../../build/orcahand_controller/orcahand_controller.egg-info/top_level.txt
+[0.644s] reading manifest file '../../build/orcahand_controller/orcahand_controller.egg-info/SOURCES.txt'
+[0.644s] writing manifest file '../../build/orcahand_controller/orcahand_controller.egg-info/SOURCES.txt'
+[0.644s] running build
+[0.644s] running build_py
+[0.644s] copying orcahand_controller/leap_to_orcahand.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/build/lib/orcahand_controller
+[0.644s] running install
+[0.644s] running install_lib
+[0.645s] copying /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/build/lib/orcahand_controller/leap_to_orcahand.py -> /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages/orcahand_controller
+[0.645s] byte-compiling /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages/orcahand_controller/leap_to_orcahand.py to leap_to_orcahand.cpython-310.pyc
+[0.647s] running install_data
+[0.647s] running install_egg_info
+[0.647s] removing '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages/orcahand_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[0.648s] Copying ../../build/orcahand_controller/orcahand_controller.egg-info to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages/orcahand_controller-0.0.0-py3.10.egg-info
+[0.648s] running install_scripts
+[0.657s] Installing leap_to_orcahand script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/orcahand_controller
+[0.658s] Installing orcahand_commander script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/orcahand_controller
+[0.658s] Installing orcahand_driver script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/orcahand_controller
+[0.658s] writing list of installed files to '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/install.log'
+[0.675s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller' returned '0': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orcahand_controller build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/install.log --single-version-externally-managed install_data

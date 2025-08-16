@@ -21,16 +21,16 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 启动我们新创建的转换节点
-    leap_to_orcahand_node = Node(
-        package='orcahand_controller', 
-        executable='leap_to_orcahand',
-        name='leap_to_orcahand_node',
-        output='screen'
-    )
+    # # 启动我们新创建的转换节点
+    # leap_to_orcahand_node = Node(
+    #     package='orcahand_controller', 
+    #     executable='leap_to_orcahand',
+    #     name='leap_to_orcahand_node',
+    #     output='screen'
+    # )
 
     return LaunchDescription([
         orcahand_display_launch,
         leap_publisher_node,
-        leap_to_orcahand_node
+        # leap_to_orcahand_node
     ])

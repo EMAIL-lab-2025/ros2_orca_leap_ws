@@ -1,28 +1,29 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 import os
 from glob import glob
+
 package_name = 'orca_core'
 
 setup(
     name=package_name,
-    version='0.1.0',
-    packages=find_packages(exclude=['tests']), # 自动查找所有包
-    include_package_data=True,
-    package_data={
-        'orca_core': ['models/**'],
-    },
+    version='0.0.0',
+    packages=find_packages(exclude=['test']),
+    
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools', 'numpy',
-        'pyyaml',],
+    
+    install_requires=['setuptools'],
     zip_safe=True,
+   
+    include_package_data=True,
+    
     maintainer='xingyi',
-    maintainer_email='peiguorui2006@outlook.com',
-    description='The orca_core package',
-    license='MIT',
+    maintainer_email='xingyi@todo.todo',
+    description='TODO: Package description',
+    license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

@@ -1,0 +1,21 @@
+[0.547s] Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ohrc_leap build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/install.log --single-version-externally-managed install_data
+[0.660s] running egg_info
+[0.661s] writing ../../build/ohrc_leap/ohrc_leap.egg-info/PKG-INFO
+[0.661s] writing dependency_links to ../../build/ohrc_leap/ohrc_leap.egg-info/dependency_links.txt
+[0.661s] writing entry points to ../../build/ohrc_leap/ohrc_leap.egg-info/entry_points.txt
+[0.661s] writing requirements to ../../build/ohrc_leap/ohrc_leap.egg-info/requires.txt
+[0.661s] writing top-level names to ../../build/ohrc_leap/ohrc_leap.egg-info/top_level.txt
+[0.661s] reading manifest file '../../build/ohrc_leap/ohrc_leap.egg-info/SOURCES.txt'
+[0.662s] writing manifest file '../../build/ohrc_leap/ohrc_leap.egg-info/SOURCES.txt'
+[0.662s] running build
+[0.662s] running build_py
+[0.662s] running install
+[0.662s] running install_lib
+[0.663s] running install_data
+[0.663s] running install_egg_info
+[0.664s] removing '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap-0.0.0-py3.10.egg-info' (and everything under it)
+[0.664s] Copying ../../build/ohrc_leap/ohrc_leap.egg-info to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages/ohrc_leap-0.0.0-py3.10.egg-info
+[0.664s] running install_scripts
+[0.675s] Installing state_topic_publisher script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/ohrc_leap
+[0.675s] writing list of installed files to '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/install.log'
+[0.691s] Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap' returned '0': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ohrc_leap build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/install.log --single-version-externally-managed install_data
