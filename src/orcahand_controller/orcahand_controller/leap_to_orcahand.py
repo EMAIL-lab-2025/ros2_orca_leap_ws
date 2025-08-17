@@ -70,7 +70,8 @@ FINGER_JOINT_MAPPINGS = {
 # 新增：大拇指PIP和DIP关节的映射关系
 THUMB_JOINT_MAPPINGS = {
     "pip": {"input_range": [3, 31], "output_range": [-10, 110]},
-    "dip": {"input_range": [9, 38], "output_range": [-10, 110]}
+    "dip": {"input_range": [9, 38], "output_range": [-10, 110]},
+    "abd": {"input_range": [15, 47], "output_range": [40, -13]}
 }
 
 # 新增：手腕关节的映射关系
@@ -233,6 +234,54 @@ def calculate_wrist_angle(hand, palm_forward, palm_normal):
     
     return None
 
+def calculate_thumb_abd_angle(thumb_finger, hand):
+    """
+    计算大拇指ABD角度，基于大拇指Proximal骨骼和食指掌骨的夹角
+    """
+    try:
+        # 获取大拇指Proximal骨骼方向向量（第1个骨骼，索引为1）
+        if len(thumb_finger.bones) < 2:
+            print("大拇指骨骼数量不足，需要至少2个骨骼")
+            return None
+        thumb_proximal_dir = get_valid_bone_direction(thumb_finger.bones[1])  # Proximal骨骼
+        if thumb_proximal_dir is None:
+            print("无法获取大拇指Proximal骨骼方向向量")
+            return None
+        
+        # 查找食指并获取其掌骨方向向量
+        index_finger = None
+        for finger in hand.fingers:
+            if finger.type == 1:  # 食指
+                index_finger = finger
+                break
+        
+        if index_finger is None:
+            print("未找到食指")
+            return None
+        
+        if len(index_finger.bones) < 1:
+            print("食指骨骼数量不足")
+            return None
+        
+        index_mc_dir = get_valid_bone_direction(index_finger.bones[0])  # 掌骨
+        if index_mc_dir is None:
+            print("无法获取食指掌骨方向向量")
+            return None
+        
+        # 计算两个骨骼向量之间的夹角（正值，单位度）
+        abd_angle = math.degrees(angle_between(thumb_proximal_dir, index_mc_dir))
+        print(f"大拇指Proximal与食指掌骨夹角: {abd_angle}")
+        
+        # 应用映射关系
+        mapping = THUMB_JOINT_MAPPINGS["abd"]
+        mapped_abd_angle = np.interp(abd_angle, mapping["input_range"], mapping["output_range"])
+        
+        return mapped_abd_angle
+        
+    except Exception as e:
+        print(f"计算大拇指ABD角度时出错: {e}")
+        return None
+
 # ================== 核心计算函数 ==================
 
 def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_offsets=None, grip_mode=False):
@@ -311,6 +360,14 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
                 lo, hi = JOINT_ROMS[j_abd]
                 angles[j_abd] = _clamp(abd_angle, lo, hi)
     else:
+        # 大拇指ABD角度计算
+        thumb_abd_angle = calculate_thumb_abd_angle(finger, hand)
+        if thumb_abd_angle is not None:
+            j_abd = JOINT_MAPPING[fname].get("abd")
+            if j_abd:
+                angles[j_abd] = thumb_abd_angle
+
+        # 大拇指mcp角度计算
         mcp_vec = None
         if len(valid_dirs) >= 1 and valid_dirs[0] is not None:
             mcp_vec = valid_dirs[0]  # 优先使用近节指骨（Proximal Phalanx）
@@ -360,13 +417,9 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
                 angles[j_pip] = pip_angle
 
     else:
-        
         # 计算大拇指的PIP和DIP关节
-        j_abd = JOINT_MAPPING[fname].get("abd")
-        angles[j_abd] = 33
         if len(valid_pairs) >= 1:
             pip_angle = math.degrees(angle_between(valid_pairs[0][0], valid_pairs[0][1]))
-            # 使用新的映射逻辑
             mapping = THUMB_JOINT_MAPPINGS["pip"]
             mapped_pip_angle = np.interp(pip_angle, mapping["input_range"], mapping["output_range"])
             
@@ -376,7 +429,6 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
 
         if len(valid_pairs) >= 2:
             dip_angle = math.degrees(angle_between(valid_pairs[1][0], valid_pairs[1][1]))
-            # 使用新的映射逻辑
             mapping = THUMB_JOINT_MAPPINGS["dip"]
             mapped_dip_angle = np.interp(dip_angle, mapping["input_range"], mapping["output_range"])
             
