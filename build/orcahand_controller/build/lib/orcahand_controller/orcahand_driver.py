@@ -61,7 +61,6 @@ class OrcahandDriverNode(Node):
         if self.torque_state:
             target_positions_deg = {}
             for i, name in enumerate(msg.name):
-                # 假设命令消息中的单位是度(deg)，如果是弧度需要转换
                 target_positions_deg[name] = msg.position[i]
             
             if not target_positions_deg:
@@ -93,7 +92,7 @@ class OrcahandDriverNode(Node):
     def read_and_publish_callback(self,):
         try:
             current_positions_deg = self.hand.get_joint_pos(as_list=True)
-            self.get_logger().info(f"DEBUG: get_joint_pos() returned: {current_positions_deg}")
+            self.get_logger().info(f"DEBUG: {self.internal_names} {current_positions_deg}")
             current_positions_rad = [float(pos * (math.pi / 180.0)) for pos in current_positions_deg]
             js_msg = JointState()
             js_msg.header = Header()

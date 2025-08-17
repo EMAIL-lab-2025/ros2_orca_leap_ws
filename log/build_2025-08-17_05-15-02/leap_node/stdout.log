@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/leap_node/leap_node.egg-info/PKG-INFO
+writing dependency_links to ../../build/leap_node/leap_node.egg-info/dependency_links.txt
+writing entry points to ../../build/leap_node/leap_node.egg-info/entry_points.txt
+writing requirements to ../../build/leap_node/leap_node.egg-info/requires.txt
+writing top-level names to ../../build/leap_node/leap_node.egg-info/top_level.txt
+reading manifest file '../../build/leap_node/leap_node.egg-info/SOURCES.txt'
+writing manifest file '../../build/leap_node/leap_node.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/leap_node/leap_node.egg-info to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages/leap_node-0.0.0-py3.10.egg-info
+running install_scripts
+Installing all_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing finger_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing gesture_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing hands_publisher script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing position_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing posture_detector script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing rviz_visualizer script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing test_rviz script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+Installing visualizer script to /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/leap_node
+writing list of installed files to '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/install.log'
