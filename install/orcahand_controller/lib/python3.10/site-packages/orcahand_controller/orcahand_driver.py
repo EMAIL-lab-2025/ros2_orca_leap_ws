@@ -54,7 +54,7 @@ class OrcahandDriverNode(Node):
             self.get_logger().info(f"Error: {str(e)}")
             return 1
 
-        self.read_publish_timer = self.create_timer(0.1, self.read_and_publish_callback)# 10HZ尝试延迟
+        self.read_publish_timer = self.create_timer(0.02, self.read_and_publish_callback)
 
     def command_callback(self, msg: JointState):
         """接收到指令后的回调函数"""
@@ -69,7 +69,7 @@ class OrcahandDriverNode(Node):
             self.get_logger().info(f"Executing command: {target_positions_deg}")
             try:
                 # 使用平滑移动
-                self.hand.set_joint_pos(target_positions_deg, num_steps=10, step_size=0.025)
+                self.hand.set_joint_pos(target_positions_deg, num_steps=1, step_size=0.02)
             except Exception as e:
                 self.get_logger().error(f"Failed to execute command: {e}")
         else:

@@ -469,7 +469,7 @@ class LeapToOrcahandNode(Node):
         
         # 用于低通滤波的变量，alpha值越小，平滑效果越明显
         self.prev_angles = {}
-        self.alpha = 0.35
+        self.alpha = 0.8
         
         # 用于存储手指开合角度的零点偏移
         self.abd_zero_offsets = {"Thumb": 0.0, "Index": 7.0, "Middle": -13.0, "Ring": -21.8, "Pinky": -47.6}
