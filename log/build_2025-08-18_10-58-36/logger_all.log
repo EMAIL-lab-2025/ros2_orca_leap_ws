@@ -1,0 +1,481 @@
+[0.045s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--cmake-args', '-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']
+[0.045s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7db7b4409cf0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7db7b4567190>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7db7b4567190>>)
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.121s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extension 'ignore_ament_install'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extensions ['colcon_pkg']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extension 'colcon_pkg'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extensions ['colcon_meta']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extension 'colcon_meta'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extensions ['ros']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_msgs) by extension 'ros'
+[0.132s] DEBUG:colcon.colcon_core.package_identification:Package 'src/leap_msgs' with type 'ros.ament_cmake' and name 'leap_msgs'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extensions ['ignore', 'ignore_ament_install']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extension 'ignore'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extension 'ignore_ament_install'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extensions ['colcon_pkg']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extension 'colcon_pkg'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extensions ['colcon_meta']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extension 'colcon_meta'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extensions ['ros']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_node) by extension 'ros'
+[0.133s] DEBUG:colcon.colcon_core.package_identification:Package 'src/leap_node' with type 'ros.ament_python' and name 'leap_node'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extensions ['ignore', 'ignore_ament_install']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extension 'ignore'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extension 'ignore_ament_install'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extensions ['colcon_pkg']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extension 'colcon_pkg'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extensions ['colcon_meta']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extension 'colcon_meta'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extensions ['ros']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/leap_to_orcahand) by extension 'ros'
+[0.133s] DEBUG:colcon.colcon_core.package_identification:Package 'src/leap_to_orcahand' with type 'ros.ament_cmake' and name 'leap_to_orcahand'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extensions ['ignore', 'ignore_ament_install']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extension 'ignore'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extension 'ignore_ament_install'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extensions ['colcon_pkg']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extension 'colcon_pkg'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extensions ['colcon_meta']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extension 'colcon_meta'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extensions ['ros']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/ohrc_leap) by extension 'ros'
+[0.134s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ohrc_leap' with type 'ros.ament_python' and name 'ohrc_leap'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extensions ['colcon_pkg']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extension 'colcon_pkg'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extensions ['colcon_meta']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extension 'colcon_meta'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extensions ['ros']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orca_core) by extension 'ros'
+[0.134s] DEBUG:colcon.colcon_core.package_identification:Package 'src/orca_core' with type 'ros.ament_python' and name 'orca_core'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extensions ['colcon_pkg']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extension 'colcon_pkg'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extensions ['colcon_meta']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extension 'colcon_meta'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extensions ['ros']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_controller) by extension 'ros'
+[0.134s] DEBUG:colcon.colcon_core.package_identification:Package 'src/orcahand_controller' with type 'ros.ament_python' and name 'orcahand_controller'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extensions ['colcon_pkg']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extension 'colcon_pkg'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extensions ['colcon_meta']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(src/orcahand_description) by extension 'ros'
+[0.135s] DEBUG:colcon.colcon_core.package_identification:Package 'src/orcahand_description' with type 'ros.ament_cmake' and name 'orcahand_description'
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.145s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install
+[0.145s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/humble
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'cmake_target' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.162s] DEBUG:colcon.colcon_core.verb:Building package 'leap_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'cmake_target' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'cmake_clean_cache' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'cmake_clean_first' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'cmake_force_configure' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'ament_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'catkin_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'leap_to_orcahand' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.162s] DEBUG:colcon.colcon_core.verb:Building package 'leap_to_orcahand' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_to_orcahand', 'symlink_install': False, 'test_result_base': None}
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'cmake_target' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'cmake_clean_cache' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'cmake_clean_first' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'cmake_force_configure' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'ament_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'catkin_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'ohrc_leap' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.162s] DEBUG:colcon.colcon_core.verb:Building package 'ohrc_leap' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap', 'symlink_install': False, 'test_result_base': None}
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'cmake_target' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.162s] Level 5:colcon.colcon_core.verb:set package 'orca_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.162s] DEBUG:colcon.colcon_core.verb:Building package 'orca_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core', 'symlink_install': False, 'test_result_base': None}
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'cmake_target' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.163s] DEBUG:colcon.colcon_core.verb:Building package 'orcahand_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller', 'symlink_install': False, 'test_result_base': None}
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'cmake_target' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'orcahand_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.163s] DEBUG:colcon.colcon_core.verb:Building package 'orcahand_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_description', 'symlink_install': False, 'test_result_base': None}
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python']'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'cmake_target' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'leap_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.163s] DEBUG:colcon.colcon_core.verb:Building package 'leap_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python', '-DPYTHON_EXECUTABLE=/home/xingyi/.venvs/leapc/bin/python'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node', 'merge_install': False, 'path': '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node', 'symlink_install': False, 'test_result_base': None}
+[0.163s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.164s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.164s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs' with build type 'ament_cmake'
+[0.164s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_msgs'
+[0.165s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.165s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.165s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.167s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_to_orcahand' with build type 'ament_cmake'
+[0.167s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_to_orcahand'
+[0.167s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.167s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.169s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap' with build type 'ament_python'
+[0.169s] Level 1:colcon.colcon_core.shell:create_environment_hook('ohrc_leap', 'ament_prefix_path')
+[0.169s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/hook/ament_prefix_path.ps1'
+[0.169s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/hook/ament_prefix_path.dsv'
+[0.169s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/hook/ament_prefix_path.sh'
+[0.170s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.170s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.171s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core' with build type 'ament_python'
+[0.171s] Level 1:colcon.colcon_core.shell:create_environment_hook('orca_core', 'ament_prefix_path')
+[0.171s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/hook/ament_prefix_path.ps1'
+[0.171s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/hook/ament_prefix_path.dsv'
+[0.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/hook/ament_prefix_path.sh'
+[0.172s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.172s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.173s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller' with build type 'ament_python'
+[0.173s] Level 1:colcon.colcon_core.shell:create_environment_hook('orcahand_controller', 'ament_prefix_path')
+[0.173s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/hook/ament_prefix_path.ps1'
+[0.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/hook/ament_prefix_path.dsv'
+[0.174s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/hook/ament_prefix_path.sh'
+[0.174s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.174s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.175s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_description' with build type 'ament_cmake'
+[0.175s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_description'
+[0.175s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.175s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs -- -j32 -l32
+[0.180s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand -- -j32 -l32
+[0.291s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap'
+[0.292s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.292s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.406s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core'
+[0.406s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.406s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.521s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller'
+[0.521s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.521s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.527s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description -- -j32 -l32
+[0.527s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs -- -j32 -l32
+[0.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs
+[0.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand -- -j32 -l32
+[0.534s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand
+[0.541s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leap_to_orcahand)
+[0.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_to_orcahand
+[0.545s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand' for CMake module files
+[0.546s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand' for CMake config files
+[0.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_to_orcahand', 'cmake_prefix_path')
+[0.546s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/hook/cmake_prefix_path.ps1'
+[0.546s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/hook/cmake_prefix_path.dsv'
+[0.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/hook/cmake_prefix_path.sh'
+[0.547s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/bin'
+[0.547s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/lib/pkgconfig/leap_to_orcahand.pc'
+[0.548s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/lib/python3.10/site-packages'
+[0.548s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/bin'
+[0.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.ps1'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.dsv'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.sh'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.bash'
+[0.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.zsh'
+[0.550s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/colcon-core/packages/leap_to_orcahand)
+[0.551s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leap_to_orcahand)
+[0.551s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand' for CMake module files
+[0.551s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand' for CMake config files
+[0.552s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_to_orcahand', 'cmake_prefix_path')
+[0.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/hook/cmake_prefix_path.ps1'
+[0.552s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/hook/cmake_prefix_path.dsv'
+[0.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/hook/cmake_prefix_path.sh'
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/bin'
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/lib/pkgconfig/leap_to_orcahand.pc'
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/lib/python3.10/site-packages'
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/bin'
+[0.553s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.ps1'
+[0.554s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.dsv'
+[0.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.sh'
+[0.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.bash'
+[0.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/leap_to_orcahand/package.zsh'
+[0.554s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand/share/colcon-core/packages/leap_to_orcahand)
+[0.555s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --build /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description -- -j32 -l32
+[0.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description
+[0.563s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orcahand_description)
+[0.563s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_description
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description' for CMake module files
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description' for CMake config files
+[0.564s] Level 1:colcon.colcon_core.shell:create_environment_hook('orcahand_description', 'cmake_prefix_path')
+[0.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/hook/cmake_prefix_path.ps1'
+[0.565s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/hook/cmake_prefix_path.dsv'
+[0.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/hook/cmake_prefix_path.sh'
+[0.565s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/bin'
+[0.565s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/lib/pkgconfig/orcahand_description.pc'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/lib/python3.10/site-packages'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/bin'
+[0.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.ps1'
+[0.567s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.dsv'
+[0.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.sh'
+[0.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.bash'
+[0.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.zsh'
+[0.569s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/colcon-core/packages/orcahand_description)
+[0.569s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orcahand_description)
+[0.570s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description' for CMake module files
+[0.570s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description' for CMake config files
+[0.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('orcahand_description', 'cmake_prefix_path')
+[0.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/hook/cmake_prefix_path.ps1'
+[0.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/hook/cmake_prefix_path.dsv'
+[0.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/hook/cmake_prefix_path.sh'
+[0.571s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/bin'
+[0.571s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/lib/pkgconfig/orcahand_description.pc'
+[0.572s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/lib/python3.10/site-packages'
+[0.572s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/bin'
+[0.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.ps1'
+[0.572s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.dsv'
+[0.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.sh'
+[0.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.bash'
+[0.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/orcahand_description/package.zsh'
+[0.574s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description/share/colcon-core/packages/orcahand_description)
+[0.575s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leap_msgs)
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs' for CMake module files
+[0.575s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node:/opt/ros/humble PS1=(leapc) VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/cmake --install /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_msgs
+[0.576s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs' for CMake config files
+[0.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_msgs', 'cmake_prefix_path')
+[0.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/cmake_prefix_path.ps1'
+[0.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/cmake_prefix_path.dsv'
+[0.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/cmake_prefix_path.sh'
+[0.576s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib'
+[0.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_msgs', 'ld_library_path_lib')
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/ld_library_path_lib.ps1'
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/ld_library_path_lib.dsv'
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/ld_library_path_lib.sh'
+[0.577s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/bin'
+[0.577s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/pkgconfig/leap_msgs.pc'
+[0.577s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/python3.10/site-packages'
+[0.577s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_msgs', 'pythonpath')
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/pythonpath.ps1'
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/pythonpath.dsv'
+[0.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/pythonpath.sh'
+[0.578s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/bin'
+[0.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.ps1'
+[0.578s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.dsv'
+[0.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.sh'
+[0.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.bash'
+[0.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.zsh'
+[0.579s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/colcon-core/packages/leap_msgs)
+[0.579s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leap_msgs)
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs' for CMake module files
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs' for CMake config files
+[0.579s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_msgs', 'cmake_prefix_path')
+[0.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/cmake_prefix_path.ps1'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/cmake_prefix_path.dsv'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/cmake_prefix_path.sh'
+[0.580s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib'
+[0.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_msgs', 'ld_library_path_lib')
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/ld_library_path_lib.ps1'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/ld_library_path_lib.dsv'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/ld_library_path_lib.sh'
+[0.580s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/bin'
+[0.580s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/pkgconfig/leap_msgs.pc'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/python3.10/site-packages'
+[0.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_msgs', 'pythonpath')
+[0.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/pythonpath.ps1'
+[0.581s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/pythonpath.dsv'
+[0.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/hook/pythonpath.sh'
+[0.581s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/bin'
+[0.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.ps1'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.dsv'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.sh'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.bash'
+[0.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/leap_msgs/package.zsh'
+[0.582s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/share/colcon-core/packages/leap_msgs)
+[0.582s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node' with build type 'ament_python'
+[0.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_node', 'ament_prefix_path')
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/hook/ament_prefix_path.ps1'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/hook/ament_prefix_path.dsv'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/hook/ament_prefix_path.sh'
+[0.583s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.583s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.710s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node'
+[0.711s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.711s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ohrc_leap build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/install.log --single-version-externally-managed install_data
+[0.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orca_core build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/install.log --single-version-externally-managed install_data
+[0.717s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orcahand_controller build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/install.log --single-version-externally-managed install_data
+[0.846s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap' for CMake module files
+[0.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/ohrc_leap' returned '0': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ohrc_leap build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/ohrc_leap/install.log --single-version-externally-managed install_data
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap' for CMake config files
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib'
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/bin'
+[0.848s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/pkgconfig/ohrc_leap.pc'
+[0.848s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages'
+[0.848s] Level 1:colcon.colcon_core.shell:create_environment_hook('ohrc_leap', 'pythonpath')
+[0.848s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/hook/pythonpath.ps1'
+[0.848s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/hook/pythonpath.dsv'
+[0.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/hook/pythonpath.sh'
+[0.849s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/bin'
+[0.849s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ohrc_leap)
+[0.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/package.ps1'
+[0.850s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/package.dsv'
+[0.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/package.sh'
+[0.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/package.bash'
+[0.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/ohrc_leap/package.zsh'
+[0.850s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/share/colcon-core/packages/ohrc_leap)
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core' for CMake module files
+[0.851s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orca_core' returned '0': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orca_core build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orca_core/install.log --single-version-externally-managed install_data
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core' for CMake config files
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib'
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/bin'
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/pkgconfig/orca_core.pc'
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages'
+[0.852s] Level 1:colcon.colcon_core.shell:create_environment_hook('orca_core', 'pythonpath')
+[0.852s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/hook/pythonpath.ps1'
+[0.852s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/hook/pythonpath.dsv'
+[0.852s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/hook/pythonpath.sh'
+[0.853s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/bin'
+[0.853s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orca_core)
+[0.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/package.ps1'
+[0.853s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/package.dsv'
+[0.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/package.sh'
+[0.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/package.bash'
+[0.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/orca_core/package.zsh'
+[0.854s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/share/colcon-core/packages/orca_core)
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller' for CMake module files
+[0.857s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/orcahand_controller' returned '0': PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/orcahand_controller build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/orcahand_controller/install.log --single-version-externally-managed install_data
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller' for CMake config files
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/bin'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/pkgconfig/orcahand_controller.pc'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages'
+[0.859s] Level 1:colcon.colcon_core.shell:create_environment_hook('orcahand_controller', 'pythonpath')
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/hook/pythonpath.ps1'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/hook/pythonpath.dsv'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/hook/pythonpath.sh'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/bin'
+[0.859s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orcahand_controller)
+[0.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/package.ps1'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/package.dsv'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/package.sh'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/package.bash'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/orcahand_controller/package.zsh'
+[0.860s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/share/colcon-core/packages/orcahand_controller)
+[0.880s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node': CMAKE_PREFIX_PATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_node build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/install.log --single-version-externally-managed install_data
+[1.008s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node' for CMake module files
+[1.009s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/src/leap_node' returned '0': CMAKE_PREFIX_PATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_description:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_to_orcahand PS1=(leapc) PYTHONPATH=/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_msgs/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orcahand_controller/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/orca_core/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/ohrc_leap/lib/python3.10/site-packages:/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages VIRTUAL_ENV_PROMPT=(leapc) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_node build --build-base /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/build install --record /home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/build/leap_node/install.log --single-version-externally-managed install_data
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node' for CMake config files
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib'
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/bin'
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/pkgconfig/leap_node.pc'
+[1.010s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/lib/python3.10/site-packages'
+[1.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('leap_node', 'pythonpath')
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/hook/pythonpath.ps1'
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/hook/pythonpath.dsv'
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/hook/pythonpath.sh'
+[1.011s] Level 1:colcon.colcon_core.environment:checking '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/bin'
+[1.011s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leap_node)
+[1.011s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/package.ps1'
+[1.011s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/package.dsv'
+[1.011s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/package.sh'
+[1.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/package.bash'
+[1.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/leap_node/package.zsh'
+[1.012s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/leap_node/share/colcon-core/packages/leap_node)
+[1.012s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.012s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.012s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.012s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.017s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.018s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.018s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.027s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.028s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/local_setup.ps1'
+[1.028s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/_local_setup_util_ps1.py'
+[1.029s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/setup.ps1'
+[1.030s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/local_setup.sh'
+[1.031s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/_local_setup_util_sh.py'
+[1.031s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/setup.sh'
+[1.032s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/local_setup.bash'
+[1.032s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/setup.bash'
+[1.033s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/local_setup.zsh'
+[1.033s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xingyi/ros2_orca_leap/ros2_orca_leap_ws/install/setup.zsh'

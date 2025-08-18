@@ -54,7 +54,7 @@ class OrcahandDriverNode(Node):
             self.get_logger().info(f"Error: {str(e)}")
             return 1
 
-        self.read_publish_timer = self.create_timer(0.02, self.read_and_publish_callback)
+        self.read_publish_timer = self.create_timer(0.1, self.read_and_publish_callback)# 10HZ尝试延迟
 
     def command_callback(self, msg: JointState):
         """接收到指令后的回调函数"""

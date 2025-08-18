@@ -6,16 +6,14 @@ import numpy as np
 import math
 from leap_msgs.msg import Hands, Hand, Finger, Bone
 from sensor_msgs.msg import JointState
+import time
 
 # ================== 全局配置 ==================
 
-# 定义了每个关节的活动范围（Range of Motion），单位为度。
+# 定义了abd关节的活动范围（Range of Motion），单位为度。
 # 用于后续将计算出的角度限制在机械臂的安全活动范围内。
 JOINT_ROMS = {
-    "thumb_mcp": [-50, 50],
     "thumb_abd": [-22, 42],
-    "thumb_pip": [-12, 110],
-    "thumb_dip": [-20, 112],
     "index_abd": [-37, 40],
     "middle_abd": [-37, 37],
     "ring_abd": [-37, 45],
@@ -34,49 +32,41 @@ JOINT_MAPPING = {
     "Pinky": {"mcp": "pinky_mcp", "pip": "pinky_pip", "abd": "pinky_abd"},
 }
 
-# 定义了激活控制的抓握强度阈值。左手抓握强度超过此值时，右手开始映射控制。
+# 定义了激活校准的抓握强度阈值。左手抓握强度超过此值时，开始校准。
 GRAB_STRENGTH_THRESHOLD = 0.8
 
-# 按手指配置ABD（手指开合）方向的符号。
-# 有时传感器数据或坐标系定义可能导致开合方向相反，可在此处通过乘以-1.0来快速校正。
-FINGER_ABD_SIGN = {
-    "Thumb": 1.0,
-    "Index": 1.0,
-    "Middle": 1.0,
-    "Ring": 1.0,
-    "Pinky": 1.0,
-}
-
-# 新增：四根手指MCP和PIP关节的映射关系
-FINGER_JOINT_MAPPINGS = {
-    "Index": {
-        "mcp": {"input_range": [-27.3, 74], "output_range": [-20, 95]},
-        "pip": {"input_range": [-5, 27], "output_range": [-20, 105]}
+# 整合的映射配置，包含所有关节的映射关系
+MAPPINGS = {
+    # 四根手指MCP和PIP关节的映射关系
+    "fingers": {
+        "Index": {
+            "mcp": {"input_range": [-27.3, 74], "output_range": [-20, 95]},
+            "pip": {"input_range": [3, 70], "output_range": [0, 105]}
+        },
+        "Middle": {
+            "mcp": {"input_range": [-27.3, 74], "output_range": [-20, 90]},
+            "pip": {"input_range": [1, 70], "output_range": [0, 107]}
+        },
+        "Ring": {
+            "mcp": {"input_range": [-27.3, 74], "output_range": [-19, 90]},
+            "pip": {"input_range": [7, 81], "output_range": [0, 107]}
+        },
+        "Pinky": {
+            "mcp": {"input_range": [-27.3, 74], "output_range": [-20, 95]},
+            "pip": {"input_range": [11, 70], "output_range": [0, 90]}
+        }
     },
-    "Middle": {
-        "mcp": {"input_range": [-27.3, 74], "output_range": [-20, 90]},
-        "pip": {"input_range": [5, 27], "output_range": [-20, 107]}
+    # 大拇指PIP和DIP关节的映射关系
+    "thumb": {
+        "mcp": {"input_range": [-40, 0], "output_range":[-50,50]},
+        "abd": {"input_range": [20, 35], "output_range": [40, -13]},
+        "pip": {"input_range": [3, 31], "output_range": [-10, 110]},
+        "dip": {"input_range": [12, 38], "output_range": [-6, 110]}
     },
-    "Ring": {
-        "mcp": {"input_range": [-27.3, 74], "output_range": [-19, 90]},
-        "pip": {"input_range": [7, 27], "output_range": [-19, 107]}
-    },
-    "Pinky": {
-        "mcp": {"input_range": [-27.3, 74], "output_range": [-20, 95]},
-        "pip": {"input_range": [23, 27], "output_range": [-20, 90]}
+    # 手腕关节的映射关系（不参与校准）
+    "wrist": {
+        "flex": {"input_range": [58, 128], "output_range": [40, -30]}
     }
-}
-
-# 新增：大拇指PIP和DIP关节的映射关系
-THUMB_JOINT_MAPPINGS = {
-    "pip": {"input_range": [3, 31], "output_range": [-10, 110]},
-    "dip": {"input_range": [9, 38], "output_range": [-10, 110]},
-    "abd": {"input_range": [15, 47], "output_range": [40, -13]}
-}
-
-# 新增：手腕关节的映射关系
-WRIST_MAPPING = {
-    "flex": {"input_range": [58, 128], "output_range": [40, -30]}
 }
 
 # 定义右手抓握时的预设关节位置
@@ -154,7 +144,7 @@ def _project_on_plane(v, normal):
 
 def signed_angle_on_plane(v, ref, normal):
     """
-    计算有符号平面夹角的核心函数，用于计算手指开合（ABD）角度。
+    计算有符号平面夹角的核心函数
 
     v_p = ..., r_p = ...: 将输入向量v和参考向量ref都投影到由normal定义的平面上，并归一化。
     unsigned = angle_between(v_p, r_p): 计算两个投影向量之间的"无符号"夹角（总是正值）。
@@ -213,6 +203,8 @@ def calculate_proximal_plane_normal(hand):
     except:
         return None
 
+# ================== 核心计算函数 ==================
+
 def calculate_wrist_angle(hand, palm_forward, palm_normal):
     """
     计算手腕角度
@@ -227,12 +219,12 @@ def calculate_wrist_angle(hand, palm_forward, palm_normal):
         wrist_angle = signed_angle_on_plane(palm_forward, arm_direction, side_vector)
         
         # 3. 应用映射关系
-        mapping = WRIST_MAPPING["flex"]
+        mapping = MAPPINGS["wrist"]["flex"]
         mapped_wrist_angle = np.interp(wrist_angle, mapping["input_range"], mapping["output_range"])
         
-        return mapped_wrist_angle
+        return mapped_wrist_angle, wrist_angle  # 返回映射后的角度和原始角度
     
-    return None
+    return None, None
 
 def calculate_thumb_abd_angle(thumb_finger, hand):
     """
@@ -242,11 +234,11 @@ def calculate_thumb_abd_angle(thumb_finger, hand):
         # 获取大拇指Proximal骨骼方向向量（第1个骨骼，索引为1）
         if len(thumb_finger.bones) < 2:
             print("大拇指骨骼数量不足，需要至少2个骨骼")
-            return None
+            return None, None
         thumb_proximal_dir = get_valid_bone_direction(thumb_finger.bones[1])  # Proximal骨骼
         if thumb_proximal_dir is None:
             print("无法获取大拇指Proximal骨骼方向向量")
-            return None
+            return None, None
         
         # 查找食指并获取其掌骨方向向量
         index_finger = None
@@ -257,34 +249,31 @@ def calculate_thumb_abd_angle(thumb_finger, hand):
         
         if index_finger is None:
             print("未找到食指")
-            return None
+            return None, None
         
         if len(index_finger.bones) < 1:
             print("食指骨骼数量不足")
-            return None
+            return None, None
         
         index_mc_dir = get_valid_bone_direction(index_finger.bones[0])  # 掌骨
         if index_mc_dir is None:
             print("无法获取食指掌骨方向向量")
-            return None
+            return None, None
         
         # 计算两个骨骼向量之间的夹角（正值，单位度）
         abd_angle = math.degrees(angle_between(thumb_proximal_dir, index_mc_dir))
-        print(f"大拇指Proximal与食指掌骨夹角: {abd_angle}")
-        
+
         # 应用映射关系
-        mapping = THUMB_JOINT_MAPPINGS["abd"]
+        mapping = MAPPINGS["thumb"]["abd"]
         mapped_abd_angle = np.interp(abd_angle, mapping["input_range"], mapping["output_range"])
         
-        return mapped_abd_angle
+        return mapped_abd_angle, abd_angle  # 返回映射后的角度和原始角度
         
     except Exception as e:
         print(f"计算大拇指ABD角度时出错: {e}")
-        return None
+        return None, None
 
-# ================== 核心计算函数 ==================
-
-def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_offsets=None, grip_mode=False):
+def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_offsets=None, grip_mode=False, calibration_mode=False):
     """
     计算单根手指的所有关节角度。
     此函数是所有映射逻辑的核心，它处理所有手指的常规关节，并包含大拇指MCP关节的特殊处理逻辑。
@@ -296,39 +285,42 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
         palm_normal: 代表手掌法线方向的参考向量。
         abd_zero_offsets: 手指开合角度的零点偏移量，用于校准。
         grip_mode: 是否处于抓握模式
+        calibration_mode: 是否处于校准模式
         
     返回:
-        一个字典，键是关节名称，值是计算出的角度（单位：度）。
+        mapped_angles: 一个字典，键是关节名称，值是计算出的映射后角度（单位：度）。
+        raw_angles: 一个字典，键是关节名称，值是计算出的原始角度（单位：度）。
     """
     if len(finger.bones) < 2:
-        return {}
+        return {}, {}
 
     fname = FINGER_TYPE_MAP.get(finger.type, "Unknown")
     if fname not in JOINT_MAPPING:
-        return {}
+        return {}, {}
 
-    angles = {}
+    mapped_angles = {}
+    raw_angles = {}
     
     # 如果是抓握模式，直接返回预设位置
-    if grip_mode and fname != "Thumb":
-        j_abd = JOINT_MAPPING[fname].get("abd")
-        j_mcp = JOINT_MAPPING[fname].get("mcp")
-        j_pip = JOINT_MAPPING[fname].get("pip")
+    # if grip_mode and fname != "Thumb":
+    #     j_abd = JOINT_MAPPING[fname].get("abd")
+    #     j_mcp = JOINT_MAPPING[fname].get("mcp")
+    #     j_pip = JOINT_MAPPING[fname].get("pip")
         
-        if j_abd and j_abd in GRIP_JOINT_POSITIONS:
-            angles[j_abd] = GRIP_JOINT_POSITIONS[j_abd]
-        if j_mcp and j_mcp in GRIP_JOINT_POSITIONS:
-            angles[j_mcp] = GRIP_JOINT_POSITIONS[j_mcp]
-        if j_pip and j_pip in GRIP_JOINT_POSITIONS:
-            angles[j_pip] = GRIP_JOINT_POSITIONS[j_pip]
+    #     if j_abd and j_abd in GRIP_JOINT_POSITIONS:
+    #         mapped_angles[j_abd] = GRIP_JOINT_POSITIONS[j_abd]
+    #     if j_mcp and j_mcp in GRIP_JOINT_POSITIONS:
+    #         mapped_angles[j_mcp] = GRIP_JOINT_POSITIONS[j_mcp]
+    #     if j_pip and j_pip in GRIP_JOINT_POSITIONS:
+    #         mapped_angles[j_pip] = GRIP_JOINT_POSITIONS[j_pip]
         
-        return angles
+    #     return mapped_angles, {}
     
     # --- 1. 获取所有骨骼的有效方向向量 ---
     valid_dirs = [get_valid_bone_direction(bone) for bone in finger.bones]
     non_none_dirs = [d for d in valid_dirs if d is not None]
     if len(non_none_dirs) < 1:
-        return {}
+        return {}, {}
     
     # --- 计算侧面向量，用于手指弯曲角度的有符号计算 ---
     side_vector = _safe_normalize(np.cross(palm_forward, palm_normal))
@@ -337,6 +329,7 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
     proximal_plane_normal = calculate_proximal_plane_normal(hand)
     if proximal_plane_normal is None:
         proximal_plane_normal = side_vector  # 备选方案
+        print("使用备选方案（掌面）计算四根手指的pip")
     
     # --- 2. 计算ABD（手指开合）角度 ---
     if fname != "Thumb":
@@ -344,11 +337,12 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
         if len(valid_dirs) >= 2 and valid_dirs[1] is not None:
             abd_vec = valid_dirs[1]  # 优先使用近节指骨（Proximal Phalanx）
         elif len(valid_dirs) >= 3 and valid_dirs[2] is not None:
-            abd_vec = valid_dirs[2]  # 备选使用中节指骨（Intermediate Phalanx）
+            abd_vec = valid_dirs[2]
+            print("使用备选方案（intermediate骨）计算四根手指的abd")  # 备选使用中节指骨（Intermediate Phalanx）
 
         if abd_vec is not None:
             abd_angle = signed_angle_on_plane(abd_vec, palm_forward, palm_normal)
-            abd_angle *= FINGER_ABD_SIGN.get(fname, 1.0)
+            raw_angles[JOINT_MAPPING[fname].get("abd")] = abd_angle
             # abd_angle *= 1.1
 
             if abd_zero_offsets is not None:
@@ -358,14 +352,15 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
             j_abd = JOINT_MAPPING[fname].get("abd")
             if j_abd in JOINT_ROMS:
                 lo, hi = JOINT_ROMS[j_abd]
-                angles[j_abd] = _clamp(abd_angle, lo, hi)
+                mapped_angles[j_abd] = _clamp(abd_angle, lo, hi)
     else:
         # 大拇指ABD角度计算
-        thumb_abd_angle = calculate_thumb_abd_angle(finger, hand)
+        thumb_abd_angle, thumb_abd_raw = calculate_thumb_abd_angle(finger, hand)
         if thumb_abd_angle is not None:
             j_abd = JOINT_MAPPING[fname].get("abd")
             if j_abd:
-                angles[j_abd] = thumb_abd_angle
+                mapped_angles[j_abd] = thumb_abd_angle
+                raw_angles[j_abd] = thumb_abd_raw
 
         # 大拇指mcp角度计算
         mcp_vec = None
@@ -375,13 +370,14 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
             mcp_vec = valid_dirs[1]  # 备选使用中节指骨（Intermediate Phalanx）
 
         if mcp_vec is not None:
-            mcp_angle = signed_angle_on_plane(mcp_vec, palm_forward, palm_normal)
-            mcp_angle = np.interp(mcp_angle, [-40,0 ], [-50, 50])
+            mcp_raw_angle = signed_angle_on_plane(mcp_vec, palm_forward, palm_normal)
+            mapping = MAPPINGS["thumb"]["mcp"]
+            mcp_angle = np.interp(mcp_raw_angle, mapping["input_range"], mapping["output_range"])
 
             j_mcp = JOINT_MAPPING[fname].get("mcp")
-            if j_mcp in JOINT_ROMS:
-                lo, hi = JOINT_ROMS[j_mcp]
-                angles[j_mcp] = _clamp(mcp_angle, lo, hi)
+            if j_mcp:
+                mapped_angles[j_mcp] = mcp_angle
+                raw_angles[j_mcp] = mcp_raw_angle
 
     # --- 3. 计算常规弯曲角度 (MCP/PIP/DIP) ---
     # 通过计算相邻骨骼之间的夹角来得到关节弯曲度
@@ -394,49 +390,55 @@ def calculate_finger_angles(finger, hand, palm_forward, palm_normal, abd_zero_of
         # 对于非大拇指的手指，使用新的映射逻辑
         if len(valid_pairs) >= 1:
             # 使用有符号角度计算MCP弯曲
-            mcp_angle = signed_angle_on_plane(valid_pairs[0][1], valid_pairs[0][0], side_vector)
+            mcp_raw_angle = signed_angle_on_plane(valid_pairs[0][1], valid_pairs[0][0], side_vector)
             
-            if fname in FINGER_JOINT_MAPPINGS:
-                mapping = FINGER_JOINT_MAPPINGS[fname]["mcp"]
-                mcp_angle = np.interp(mcp_angle, mapping["input_range"], mapping["output_range"])
+            mcp_angle = mcp_raw_angle
+            if fname in MAPPINGS["fingers"]:
+                mapping = MAPPINGS["fingers"][fname]["mcp"]
+                mcp_angle = np.interp(mcp_raw_angle, mapping["input_range"], mapping["output_range"])
             
             j_mcp = JOINT_MAPPING[fname].get("mcp")
             if j_mcp:
-                angles[j_mcp] = mcp_angle
+                mapped_angles[j_mcp] = mcp_angle
+                raw_angles[j_mcp] = mcp_raw_angle
 
         if len(valid_pairs) >= 2:
-            # 使用Proximal共面平面法向量计算PIP弯曲
-            pip_angle = signed_angle_on_plane(valid_pairs[1][1], valid_pairs[1][0], proximal_plane_normal)
-            
-            if fname in FINGER_JOINT_MAPPINGS:
-                mapping = FINGER_JOINT_MAPPINGS[fname]["pip"]
-                pip_angle = np.interp(pip_angle, mapping["input_range"], mapping["output_range"])
-            
+            # 计算两根骨头的夹角，不使用有符号角度
             j_pip = JOINT_MAPPING[fname].get("pip")
+            pip_raw_angle = math.degrees(angle_between(valid_pairs[1][0], valid_pairs[1][1]))
+
+            pip_angle = pip_raw_angle
+            if fname in MAPPINGS["fingers"]:
+                mapping = MAPPINGS["fingers"][fname]["pip"]
+                pip_angle = np.interp(pip_raw_angle, mapping["input_range"], mapping["output_range"])
+            
             if j_pip:
-                angles[j_pip] = pip_angle
+                mapped_angles[j_pip] = pip_angle
+                raw_angles[j_pip] = pip_raw_angle
 
     else:
         # 计算大拇指的PIP和DIP关节
         if len(valid_pairs) >= 1:
-            pip_angle = math.degrees(angle_between(valid_pairs[0][0], valid_pairs[0][1]))
-            mapping = THUMB_JOINT_MAPPINGS["pip"]
-            mapped_pip_angle = np.interp(pip_angle, mapping["input_range"], mapping["output_range"])
+            pip_raw_angle = math.degrees(angle_between(valid_pairs[0][0], valid_pairs[0][1]))
+            mapping = MAPPINGS["thumb"]["pip"]
+            mapped_pip_angle = np.interp(pip_raw_angle, mapping["input_range"], mapping["output_range"])
             
             j_pip = JOINT_MAPPING[fname].get("pip")
             if j_pip:
-                angles[j_pip] = mapped_pip_angle
+                mapped_angles[j_pip] = mapped_pip_angle
+                raw_angles[j_pip] = pip_raw_angle
 
         if len(valid_pairs) >= 2:
-            dip_angle = math.degrees(angle_between(valid_pairs[1][0], valid_pairs[1][1]))
-            mapping = THUMB_JOINT_MAPPINGS["dip"]
-            mapped_dip_angle = np.interp(dip_angle, mapping["input_range"], mapping["output_range"])
+            dip_raw_angle = math.degrees(angle_between(valid_pairs[1][0], valid_pairs[1][1]))
+            mapping = MAPPINGS["thumb"]["dip"]
+            mapped_dip_angle = np.interp(dip_raw_angle, mapping["input_range"], mapping["output_range"])
             
             j_dip = JOINT_MAPPING[fname].get("dip")
             if j_dip:
-                angles[j_dip] = mapped_dip_angle
+                mapped_angles[j_dip] = mapped_dip_angle
+                raw_angles[j_dip] = dip_raw_angle
         
-    return angles
+    return mapped_angles, raw_angles
 
 # ================== ROS 2 节点定义 ==================
 
@@ -455,8 +457,14 @@ class LeapToOrcahandNode(Node):
         # 创建发布器，用于发布控制OrcaHand的指令到 /keyboard_command 话题
         self.pub = self.create_publisher(JointState, 'keyboard_command', 10)
         
-        # 控制使能标志位，默认为关闭
-        self.control_enabled = False
+        # 校准状态变量
+        self.is_calibrating = False
+        self.calibration_data = {}  # 记录校准期间的最大值和最小值
+        
+        # ABD校准相关变量
+        self.abd_calibration_start_time = None
+        self.abd_calibration_data = {"Index": [], "Middle": [], "Ring": [], "Pinky": []}
+        
         self.get_logger().info("Leap→OrcaHand 映射节点启动")
         
         # 用于低通滤波的变量，alpha值越小，平滑效果越明显
@@ -465,6 +473,77 @@ class LeapToOrcahandNode(Node):
         
         # 用于存储手指开合角度的零点偏移
         self.abd_zero_offsets = {"Thumb": 0.0, "Index": 7.0, "Middle": -13.0, "Ring": -21.8, "Pinky": -47.6}
+
+    def start_calibration(self):
+        """开始校准过程"""
+        self.is_calibrating = True
+        self.calibration_data = {}
+        self.abd_calibration_start_time = time.time()
+        self.abd_calibration_data = {"Index": [], "Middle": [], "Ring": [], "Pinky": []}
+        self.get_logger().info("开始校准，请移动您的右手各个关节...")
+
+    def stop_calibration(self):
+        """停止校准并更新映射表"""
+        if self.is_calibrating:
+            self.is_calibrating = False
+            self.update_mappings()
+            self.calculate_abd_offsets()
+            self.get_logger().info("校准完成，映射表已更新")
+
+    def calculate_abd_offsets(self):
+        """计算ABD偏移量"""
+        target_values = {"Index": 24.4, "Middle": 3.8, "Ring": -12.0, "Pinky": -44.7}
+        
+        for finger_name in ["Index", "Middle", "Ring", "Pinky"]:
+            if len(self.abd_calibration_data[finger_name]) > 0:
+                avg_value = round(sum(self.abd_calibration_data[finger_name]) / len(self.abd_calibration_data[finger_name]), 1)
+                target_value = target_values[finger_name]
+                offset = target_value - avg_value
+                self.abd_zero_offsets[finger_name] = offset
+                self.get_logger().info(f"{finger_name} ABD: 平均值={avg_value:.1f}, 目标值={target_value:.1f}, 偏移量={offset:.1f}")
+
+    def update_mappings(self):
+        """根据校准数据更新MAPPINGS"""
+        global MAPPINGS
+        
+        for joint_name, data in self.calibration_data.items():
+            min_val = data['min']
+            max_val = data['max']
+            
+            # 为每个关节更新对应的映射范围
+            if joint_name.endswith('_mcp'):
+                finger_name = joint_name.split('_')[0].capitalize()
+                if finger_name in ['Index', 'Middle', 'Ring', 'Pinky']:
+                    MAPPINGS["fingers"][finger_name]["mcp"]["input_range"] = [min_val+3, max_val-3]
+            elif joint_name.endswith('_pip'):
+                finger_name = joint_name.split('_')[0].capitalize()
+                if finger_name in ['Index', 'Middle', 'Ring', 'Pinky']:
+                    MAPPINGS["fingers"][finger_name]["pip"]["input_range"] = [min_val+3, max_val-3]
+                elif finger_name == 'Thumb':
+                    MAPPINGS["thumb"]["pip"]["input_range"] = [min_val+3, max_val-3]
+            elif joint_name.endswith('_dip'):
+                finger_name = joint_name.split('_')[0].capitalize()
+                if finger_name == 'Thumb':
+                    MAPPINGS["thumb"]["dip"]["input_range"] = [min_val+3, max_val-3]
+            elif joint_name == 'thumb_abd':
+                MAPPINGS["thumb"]["abd"]["input_range"] = [min_val+3, max_val-3]
+            elif joint_name == 'thumb_mcp':
+                MAPPINGS["thumb"]["mcp"]["input_range"] = [min_val+3, max_val-3]
+
+    def update_calibration_data(self, joint_name, angle):
+        """更新校准数据中的最大值和最小值"""
+        if joint_name not in self.calibration_data:
+            self.calibration_data[joint_name] = {'min': angle, 'max': angle}
+        else:
+            self.calibration_data[joint_name]['min'] = min(self.calibration_data[joint_name]['min'], angle)
+            self.calibration_data[joint_name]['max'] = max(self.calibration_data[joint_name]['max'], angle)
+
+    def update_abd_calibration_data(self, finger_name, abd_angle):
+        """更新ABD校准数据"""
+        if self.abd_calibration_start_time is not None:
+            elapsed_time = time.time() - self.abd_calibration_start_time
+            if elapsed_time <= 1.0:  # 只记录前1秒的数据
+                self.abd_calibration_data[finger_name].append(abd_angle)
 
     def leap_cb(self, msg: Hands):
         """
@@ -477,18 +556,16 @@ class LeapToOrcahandNode(Node):
             elif getattr(h, 'type', '') == "Right":
                 right = h
 
-        # --- 控制激活/暂停逻辑 ---
-        # 使用左手的抓握强度来控制是否激活对右手的映射
+        # --- 校准控制逻辑 ---
+        # 使用左手的抓握强度来控制校准过程
         if left:
-            if left.grab_strength > GRAB_STRENGTH_THRESHOLD and not self.control_enabled:
-                self.control_enabled = True
-                self.get_logger().info("控制激活")
-            elif left.grab_strength < GRAB_STRENGTH_THRESHOLD and self.control_enabled:
-                self.control_enabled = False
-                self.get_logger().info("控制暂停")
+            if left.grab_strength > GRAB_STRENGTH_THRESHOLD and not self.is_calibrating:
+                self.start_calibration()
+            elif left.grab_strength < GRAB_STRENGTH_THRESHOLD and self.is_calibrating:
+                self.stop_calibration()
 
-        # 如果未激活或未检测到右手，则不执行后续操作
-        if not self.control_enabled or right is None:
+        # 如果未检测到右手，则不执行后续操作
+        if right is None:
             return
 
         # 检查右手抓握强度，判断是否进入抓握模式
@@ -511,45 +588,58 @@ class LeapToOrcahandNode(Node):
         names, positions = [], []
         current_frame_angles = {}
 
-        # 计算手腕角度
-        wrist_angle = calculate_wrist_angle(right, palm_forward, palm_normal)
+        # 计算手腕角度（手腕不参与校准）
+        wrist_angle, wrist_raw = calculate_wrist_angle(right, palm_forward, palm_normal)
         if wrist_angle is not None:
             current_frame_angles["wrist"] = wrist_angle
 
         for finger in right.fingers:
             # 将右手对象'right'传入，为计算大拇指提供上下文
-            angles = calculate_finger_angles(finger, right, palm_forward, palm_normal, self.abd_zero_offsets , grip_mode)
-            for joint_name, angle in angles.items():
+            mapped_angles, raw_angles = calculate_finger_angles(finger, right, palm_forward, palm_normal, self.abd_zero_offsets, grip_mode, self.is_calibrating)
+            
+            # 如果处于校准模式，记录原始角度的最大值和最小值
+            if self.is_calibrating:
+                fname = FINGER_TYPE_MAP.get(finger.type, "Unknown")
+                
+                # 记录ABD校准数据
+                if fname in ["Index", "Middle", "Ring", "Pinky"]:
+                    abd_joint_name = JOINT_MAPPING[fname].get("abd")
+                    if abd_joint_name in raw_angles:
+                        self.update_abd_calibration_data(fname, raw_angles[abd_joint_name])
+                
+                for joint_name, raw_angle in raw_angles.items():
+                    # 排除不需要校准的关节
+                    if not (joint_name.endswith('_abd') and joint_name != 'thumb_abd'):
+                        self.update_calibration_data(joint_name, raw_angle)
+            
+            # 使用映射后的角度进行控制
+            for joint_name, angle in mapped_angles.items():
                 current_frame_angles[joint_name] = float(angle)
 
-        # 3. 对计算出的所有角度进行低通滤波，使运动更平滑（抓握模式下不进行滤波）
-        for jn, val in current_frame_angles.items():
-            if grip_mode:
-                # 抓握模式下直接使用预设值，不进行滤波
-                filtered = val
-            else:
+        # 3. 对计算出的所有角度进行低通滤波，使运动更平滑（校准模式下不发布控制指令）
+        if not self.is_calibrating:
+            for jn, val in current_frame_angles.items():
                 if jn in self.prev_angles:
                     filtered = self.alpha * val + (1.0 - self.alpha) * self.prev_angles[jn]
                 else:
                     filtered = val
-            self.prev_angles[jn] = filtered
-            names.append(jn)
-            positions.append(filtered)
+                self.prev_angles[jn] = filtered
+                names.append(jn)
+                positions.append(filtered)
 
-        # 4. 发布最终的JointState消息
-        if names:
-            js.name = names
-            js.position = positions
-            self.pub.publish(js)
-            
-            # 调试输出，方便观察发布的指令
-            pos_int = [int(p) for p in positions]
-            joint_dict = dict(zip(names, pos_int))
-            # self.get_logger().info(f"发布关节命令: {joint_dict}", throttle_duration_sec=0.2)
+            # 4. 发布最终的JointState消息
+            if names:
+                js.name = names
+                js.position = positions
+                self.pub.publish(js)
+                
+                # 调试输出，方便观察发布的指令
+                pos_int = [int(p) for p in positions]
+                joint_dict = dict(zip(names, pos_int))
 
 def main(args=None):
     """主函数，ROS 2节点的标准入口点。"""
-    rclpy.init(args=args)
+    rclpy.init(args=None)
     node = LeapToOrcahandNode()
     try:
         rclpy.spin(node)
